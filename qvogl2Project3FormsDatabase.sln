@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.757
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "qvogl2Project3FormsDatabase", "qvogl2Project3FormsDatabase\qvogl2Project3FormsDatabase.csproj", "{D64B5A2B-D31E-4427-82C0-1003FEA07EDD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D64B5A2B-D31E-4427-82C0-1003FEA07EDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D64B5A2B-D31E-4427-82C0-1003FEA07EDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D64B5A2B-D31E-4427-82C0-1003FEA07EDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D64B5A2B-D31E-4427-82C0-1003FEA07EDD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {907E7BB5-E02D-4832-8C08-3795F1EDB89F}
+	EndGlobalSection
+EndGlobal
