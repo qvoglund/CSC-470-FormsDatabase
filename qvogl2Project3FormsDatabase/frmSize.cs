@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace qvogl2Project3FormsDatabase
 {
-    public partial class frmSize : Form
+    public partial class frmSize : Form 
     {
         public String itemSize { get; set; }
 

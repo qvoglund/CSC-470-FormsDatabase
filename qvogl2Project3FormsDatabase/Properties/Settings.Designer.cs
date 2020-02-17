@@ -26,8 +26,9 @@ namespace qvogl2Project3FormsDatabase.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\comboDB.mdf;I" +
-            "ntegrated Security=True;Connect Timeout=30")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Administrator\\source" +
+            "\\repos\\CSC-470-FormsDatabase\\qvogl2Project3FormsDatabase\\comboDB.mdf;Integrated " +
+            "Security=True;Connect Timeout=30")]
         public string comboDBConnectionString {
             get {
                 return ((string)(this["comboDBConnectionString"]));

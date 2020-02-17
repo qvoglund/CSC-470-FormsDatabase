@@ -41,6 +41,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.pbxDrink = new System.Windows.Forms.PictureBox();
             this.pbxCheckout = new System.Windows.Forms.PictureBox();
+            this.btnUpdateInventory = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbxCombo1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxCombo2)).BeginInit();
@@ -183,11 +184,22 @@
             this.pbxCheckout.TabStop = false;
             this.pbxCheckout.Click += new System.EventHandler(this.pbxCheckout_Click);
             // 
+            // btnUpdateInventory
+            // 
+            this.btnUpdateInventory.Location = new System.Drawing.Point(446, 412);
+            this.btnUpdateInventory.Name = "btnUpdateInventory";
+            this.btnUpdateInventory.Size = new System.Drawing.Size(148, 27);
+            this.btnUpdateInventory.TabIndex = 11;
+            this.btnUpdateInventory.Text = "Update Inventory";
+            this.btnUpdateInventory.UseVisualStyleBackColor = true;
+            this.btnUpdateInventory.Click += new System.EventHandler(this.btnUpdateInventory_Click);
+            // 
             // frmMainPOS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 454);
+            this.Controls.Add(this.btnUpdateInventory);
             this.Controls.Add(this.pbxCheckout);
             this.Controls.Add(this.pbxDrink);
             this.Controls.Add(this.label2);
@@ -201,6 +213,7 @@
             this.Controls.Add(this.pbxCombo1);
             this.Name = "frmMainPOS";
             this.Text = "McDonald\'s POS System";
+            this.Load += new System.EventHandler(this.frmMainPOS_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbxCombo1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxCombo2)).EndInit();
@@ -219,15 +232,16 @@
         private System.Windows.Forms.PictureBox pbxCombo1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pbxCombo2;
-        private System.Windows.Forms.TextBox tbxLineItems;
+        public System.Windows.Forms.TextBox tbxLineItems;
         private System.Windows.Forms.PictureBox pbxCombo3;
         private System.Windows.Forms.PictureBox pbxCombo4;
         private System.Windows.Forms.PictureBox pbxFries;
-        private System.Windows.Forms.TextBox txtTotal;
+        public System.Windows.Forms.TextBox txtTotal;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pbxDrink;
-        private System.Windows.Forms.PictureBox pbxCheckout;
+        public System.Windows.Forms.PictureBox pbxCheckout;
+        private System.Windows.Forms.Button btnUpdateInventory;
     }
 }
 

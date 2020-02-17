@@ -1,0 +1,1 @@
+﻿DELETE FROM Sales WHERE id = 219

@@ -25,3 +25,4 @@ C:\Users\Administrator\Source\Repos\CSC-470-FormsDatabase\qvogl2Project3FormsDat
 C:\Users\Administrator\Source\Repos\CSC-470-FormsDatabase\qvogl2Project3FormsDatabase\obj\Debug\qvogl2Project3FormsDatabase.pdb
 C:\Users\Administrator\source\repos\CSC-470-FormsDatabase\qvogl2Project3FormsDatabase\obj\Debug\qvogl2Project3FormsDatabase.checkout.resources
 C:\Users\Administrator\source\repos\CSC-470-FormsDatabase\qvogl2Project3FormsDatabase\obj\Debug\qvogl2Project3FormsDatabase.frmMainPOS.resources
+C:\Users\Administrator\Source\Repos\CSC-470-FormsDatabase\qvogl2Project3FormsDatabase\obj\Debug\qvogl2Project3FormsDatabase.updateInventory.resources
