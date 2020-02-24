@@ -192,6 +192,9 @@ namespace qvogl2Project3FormsDatabase
                 mPOS.newSale();
 
                 this.Close();
+            } else
+            {
+                MessageBox.Show("Amount Due: $ " + txtDue.Text);
             }
         }
 

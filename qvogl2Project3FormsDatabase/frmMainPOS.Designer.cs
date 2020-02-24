@@ -42,6 +42,7 @@
             this.pbxDrink = new System.Windows.Forms.PictureBox();
             this.pbxCheckout = new System.Windows.Forms.PictureBox();
             this.btnUpdateInventory = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbxCombo1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxCombo2)).BeginInit();
@@ -194,11 +195,22 @@
             this.btnUpdateInventory.UseVisualStyleBackColor = true;
             this.btnUpdateInventory.Click += new System.EventHandler(this.btnUpdateInventory_Click);
             // 
+            // btnCancel
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(340, 371);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(100, 23);
+            this.btnCancel.TabIndex = 12;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
             // frmMainPOS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 454);
+            this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnUpdateInventory);
             this.Controls.Add(this.pbxCheckout);
             this.Controls.Add(this.pbxDrink);
@@ -242,6 +254,7 @@
         private System.Windows.Forms.PictureBox pbxDrink;
         public System.Windows.Forms.PictureBox pbxCheckout;
         private System.Windows.Forms.Button btnUpdateInventory;
+        private System.Windows.Forms.Button btnCancel;
     }
 }
 

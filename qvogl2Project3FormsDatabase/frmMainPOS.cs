@@ -296,5 +296,10 @@ namespace qvogl2Project3FormsDatabase
         {
             inv.ShowDialog();
         }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            newSale();
+        }
     }
 }

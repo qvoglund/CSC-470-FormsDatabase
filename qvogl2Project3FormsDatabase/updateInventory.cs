@@ -43,23 +43,31 @@ namespace qvogl2Project3FormsDatabase
             {
                 try
                 {
-                    //inventoryTableAdapter.Insert(size, item, quantity);
-                    //inventoryTableAdapter.Update(comboDBDataSet);
-                    //this.inventoryTableAdapter.Fill(this.comboDBDataSet.inventory);
-
-                    query = "INSERT INTO Inventory VALUES('" + size + "', '" + item + "', '" + quantity + "')";
-                    SqlCommand cmd = new SqlCommand(query, conn);
-                    Console.WriteLine(query);
+                    SqlCommand cmd;
+                    query = "SELECT * FROM Inventory WHERE size = '" + size + "' AND item = '" + item + "'";
+                    cmd = new SqlCommand(query, conn);
                     conn.Open();
-                    cmd.ExecuteNonQuery();
-                    conn.Close();
+                    SqlDataReader rdr = cmd.ExecuteReader();
+                    if (!rdr.HasRows)
+                    {
+                        conn.Close();
+                        query = "INSERT INTO Inventory VALUES('" + size + "', '" + item + "', '" + quantity + "')";
+                        cmd = new SqlCommand(query, conn);
+                        conn.Open();
+                        cmd.ExecuteNonQuery();
+                        conn.Close();
+                    } else
+                    {
+                        MessageBox.Show("Inventory already contains " + size + " " + item);
+                        conn.Close();
+                    }
                     txtItem.Text = "";
                     txtSize.Text = "";
                     txtQuantity.Text = "";
                     this.inventoryTableAdapter.Update(comboDBDataSet);
                     this.inventoryTableAdapter.Fill(this.comboDBDataSet.inventory);
                 }
-                catch (SqlException ex)
+                catch (Exception ex)
                 {
                     MessageBox.Show(ex.ToString());
                 }

@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(updateInventory));
             System.Windows.Forms.Label sizeLabel;
             System.Windows.Forms.Label itemLabel;
             System.Windows.Forms.Label quantityLabel;
             System.Windows.Forms.Label item_idLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(updateInventory));
             this.inventoryBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.inventoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.comboDBDataSet = new qvogl2Project3FormsDatabase.comboDBDataSet();
@@ -42,10 +42,6 @@
             this.inventoryTableAdapter = new qvogl2Project3FormsDatabase.comboDBDataSetTableAdapters.inventoryTableAdapter();
             this.tableAdapterManager = new qvogl2Project3FormsDatabase.comboDBDataSetTableAdapters.TableAdapterManager();
             this.inventoryDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtItem = new System.Windows.Forms.TextBox();
@@ -57,6 +53,10 @@
             this.quantityTextBox = new System.Windows.Forms.TextBox();
             this.item_idTextBox = new System.Windows.Forms.TextBox();
             this.btnUpdate = new System.Windows.Forms.Button();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             sizeLabel = new System.Windows.Forms.Label();
             itemLabel = new System.Windows.Forms.Label();
             quantityLabel = new System.Windows.Forms.Label();
@@ -67,6 +67,42 @@
             ((System.ComponentModel.ISupportInitialize)(this.comboDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inventoryDataGridView)).BeginInit();
             this.SuspendLayout();
+            // 
+            // sizeLabel
+            // 
+            sizeLabel.AutoSize = true;
+            sizeLabel.Location = new System.Drawing.Point(313, 199);
+            sizeLabel.Name = "sizeLabel";
+            sizeLabel.Size = new System.Drawing.Size(28, 13);
+            sizeLabel.TabIndex = 9;
+            sizeLabel.Text = "size:";
+            // 
+            // itemLabel
+            // 
+            itemLabel.AutoSize = true;
+            itemLabel.Location = new System.Drawing.Point(313, 225);
+            itemLabel.Name = "itemLabel";
+            itemLabel.Size = new System.Drawing.Size(29, 13);
+            itemLabel.TabIndex = 11;
+            itemLabel.Text = "item:";
+            // 
+            // quantityLabel
+            // 
+            quantityLabel.AutoSize = true;
+            quantityLabel.Location = new System.Drawing.Point(313, 251);
+            quantityLabel.Name = "quantityLabel";
+            quantityLabel.Size = new System.Drawing.Size(24, 13);
+            quantityLabel.TabIndex = 13;
+            quantityLabel.Text = "qty:";
+            // 
+            // item_idLabel
+            // 
+            item_idLabel.AutoSize = true;
+            item_idLabel.Location = new System.Drawing.Point(313, 277);
+            item_idLabel.Name = "item_idLabel";
+            item_idLabel.Size = new System.Drawing.Size(40, 13);
+            item_idLabel.TabIndex = 15;
+            item_idLabel.Text = "item id:";
             // 
             // inventoryBindingNavigator
             // 
@@ -147,37 +183,6 @@
             this.inventoryDataGridView.Size = new System.Drawing.Size(295, 316);
             this.inventoryDataGridView.TabIndex = 8;
             // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "size";
-            this.dataGridViewTextBoxColumn1.HeaderText = "size";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 50;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "item";
-            this.dataGridViewTextBoxColumn2.HeaderText = "item";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "quantity";
-            this.dataGridViewTextBoxColumn3.HeaderText = "quantity";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Width = 50;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "item_id";
-            this.dataGridViewTextBoxColumn4.HeaderText = "item_id";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            this.dataGridViewTextBoxColumn4.Width = 50;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -226,15 +231,6 @@
             this.txtQuantity.Size = new System.Drawing.Size(100, 20);
             this.txtQuantity.TabIndex = 4;
             // 
-            // sizeLabel
-            // 
-            sizeLabel.AutoSize = true;
-            sizeLabel.Location = new System.Drawing.Point(313, 199);
-            sizeLabel.Name = "sizeLabel";
-            sizeLabel.Size = new System.Drawing.Size(28, 13);
-            sizeLabel.TabIndex = 9;
-            sizeLabel.Text = "size:";
-            // 
             // sizeTextBox
             // 
             this.sizeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.inventoryBindingSource, "size", true));
@@ -243,15 +239,6 @@
             this.sizeTextBox.ReadOnly = true;
             this.sizeTextBox.Size = new System.Drawing.Size(100, 20);
             this.sizeTextBox.TabIndex = 10;
-            // 
-            // itemLabel
-            // 
-            itemLabel.AutoSize = true;
-            itemLabel.Location = new System.Drawing.Point(313, 225);
-            itemLabel.Name = "itemLabel";
-            itemLabel.Size = new System.Drawing.Size(29, 13);
-            itemLabel.TabIndex = 11;
-            itemLabel.Text = "item:";
             // 
             // itemTextBox
             // 
@@ -262,15 +249,6 @@
             this.itemTextBox.Size = new System.Drawing.Size(100, 20);
             this.itemTextBox.TabIndex = 12;
             // 
-            // quantityLabel
-            // 
-            quantityLabel.AutoSize = true;
-            quantityLabel.Location = new System.Drawing.Point(313, 251);
-            quantityLabel.Name = "quantityLabel";
-            quantityLabel.Size = new System.Drawing.Size(24, 13);
-            quantityLabel.TabIndex = 13;
-            quantityLabel.Text = "qty:";
-            // 
             // quantityTextBox
             // 
             this.quantityTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.inventoryBindingSource, "quantity", true));
@@ -278,15 +256,6 @@
             this.quantityTextBox.Name = "quantityTextBox";
             this.quantityTextBox.Size = new System.Drawing.Size(100, 20);
             this.quantityTextBox.TabIndex = 14;
-            // 
-            // item_idLabel
-            // 
-            item_idLabel.AutoSize = true;
-            item_idLabel.Location = new System.Drawing.Point(313, 277);
-            item_idLabel.Name = "item_idLabel";
-            item_idLabel.Size = new System.Drawing.Size(40, 13);
-            item_idLabel.TabIndex = 15;
-            item_idLabel.Text = "item id:";
             // 
             // item_idTextBox
             // 
@@ -306,6 +275,38 @@
             this.btnUpdate.Text = "Update Inventory";
             this.btnUpdate.UseVisualStyleBackColor = true;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "size";
+            this.dataGridViewTextBoxColumn1.HeaderText = "size";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 55;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "item";
+            this.dataGridViewTextBoxColumn2.HeaderText = "item";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Width = 95;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "quantity";
+            this.dataGridViewTextBoxColumn3.HeaderText = "quantity";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Width = 50;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "item_id";
+            this.dataGridViewTextBoxColumn4.HeaderText = "item_id";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.Width = 50;
             // 
             // updateInventory
             // 
@@ -354,10 +355,6 @@
         private System.Windows.Forms.ToolStripButton inventoryBindingNavigatorSaveItem;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.DataGridView inventoryDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtItem;
@@ -369,5 +366,9 @@
         private System.Windows.Forms.TextBox quantityTextBox;
         private System.Windows.Forms.TextBox item_idTextBox;
         private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
     }
 }
