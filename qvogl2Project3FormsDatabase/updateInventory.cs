@@ -56,7 +56,8 @@ namespace qvogl2Project3FormsDatabase
                         conn.Open();
                         cmd.ExecuteNonQuery();
                         conn.Close();
-                    } else
+                    }
+                    else
                     {
                         MessageBox.Show("Inventory already contains " + size + " " + item);
                         conn.Close();
