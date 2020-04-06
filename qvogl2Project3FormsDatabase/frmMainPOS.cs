@@ -176,8 +176,8 @@ namespace qvogl2Project3FormsDatabase
             cmd = new SqlCommand(query, conn);
             conn.Open();
             reader = cmd.ExecuteReader();
-            //Console.WriteLine(query);
-            if (!reader.HasRows)
+            Console.WriteLine(query);
+            if (true)//!reader.HasRows)
             {
                 conn.Close();
                 if (Convert.ToInt16(combo) <= 3)
@@ -202,7 +202,8 @@ namespace qvogl2Project3FormsDatabase
                 reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
-                    if (Convert.ToInt16(reader["quantity"]) < 1)
+                    
+                    if (Convert.ToInt16(reader["quantity"]) < 2)
                     {
                         MessageBox.Show("Invalid number of " + reader["item"].ToString().Trim() + "s in inventory.");
                         conn.Close();
@@ -212,23 +213,23 @@ namespace qvogl2Project3FormsDatabase
                 }
 
             }
-            else
-            {
-                while (reader.Read())
-                {
-                    //Console.WriteLine(reader["quantity"].ToString());
-                    if (reader.HasRows)
-                    {
-                        if (Convert.ToInt16(reader["quantity"]) < Convert.ToInt16(reader["count"]))
-                        {
-                            MessageBox.Show("Invalid number of " + reader["item"].ToString().Trim() + "s in inventory.");
-                            conn.Close();
-                            return;
-                        }
-                    }
-                }
-            }
-
+            /* else
+             {
+                 while (reader.Read())
+                 {
+                     Console.WriteLine(reader["size"] + " " + reader["item"] + " " + reader["quantity"].ToString());
+                     if (reader.HasRows)
+                     {
+                         if (Convert.ToInt16(reader["quantity"]) < Convert.ToInt16(reader["count"]))
+                         {
+                             MessageBox.Show("Invalid number of " + reader["item"].ToString().Trim() + "s in inventory.");
+                             conn.Close();
+                             return;
+                         }
+                     }
+                 }
+             }*/
+            Console.Out.WriteLine("no return");
             conn.Close();
             updateLineItems(combo, size);
                         
@@ -256,7 +257,7 @@ namespace qvogl2Project3FormsDatabase
                 count = 1;
                 query = "INSERT INTO line_items (id, combo_num, size, count) VALUES (" + id + ", '" + combo + "', '" + size + "', " + count + ")";
             }
-            Console.WriteLine(query);
+            //Console.WriteLine(query);
             conn.Close();
             //query = "DROP TABLE line_items";
             cmd = new SqlCommand(query, conn);
